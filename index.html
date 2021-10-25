@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- W3schools.com tells you HTML element uses (disctionary of HTML) -->
+    <!-- should have mockup when goign to create a website -->
+    <!-- writing HTML work top down -->
+
+    <!-- navbar white -->
+    <div class="navbar">
+      <!-- nexted inside white box -->
+      <div class="container">
+        <!-- make logo the home page -->
+        <a class="logo" href="#"> Remeber<span>That</span> </a>
+
+        <!-- javascript allows for intelligent coding to apply CSS class that will show navigation -->
+        <!-- IDs in javascript are unique, like vector in R-->
+        <img
+          id="mobile-cta"
+          class="mobile-menu"
+          src="images/menu.svg"
+          alt="open navigation"
+        />
+        <!-- semantic tags are special  -->
+
+        <nav>
+          <img
+            id="mobile-exit"
+            class="mobile-menu-exit"
+            src="images/exit.svg"
+            alt="close navigation"
+          />
+          <ul class="primary-nav">
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
+          <ul class="secondary-nav">
+            <li class=""><a href="#">Contact</a></li>
+            <li class="go-premium-cta"><a href="#">Go Premium</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- tackling the body, 'hero' is usually the title catcher  -->
+    <section class="hero">
+      <div class="container">
+        <div class="left-column">
+          <p class="subhead">It's Nitty &amp; Gritty</p>
+          <h1>A Task App that Doesn't Stink</h1>
+
+          <div class="hero-cta">
+            <a href="#" class="primary-cta">Try for Free</a>
+            <a href="#" class="watch-video-cta">
+              <img src="images/watch.svg" alt="Watch a Video" /> Watch a Video
+            </a>
+          </div>
+        </div>
+
+        <img
+          src="images/illustration.svg"
+          class="hero-img"
+          alt="Illustration"
+        />
+      </div>
+    </section>
+
+    <section class="features-section">
+      <div class="container">
+        <ul class="features-list">
+          <li>Umlimited Tasks</li>
+          <li>SMS Task Reminders</li>
+          <li>Confetti Explosions upon Task Completions</li>
+          <li>Social Media Announcements</li>
+          <li>Real Time Collaboration</li>
+          <li>Other Awesome Features</li>
+        </ul>
+        <img src="images/holding-phone.jpg" alt="man holding phone" />
+      </div>
+    </section>
+    <section class="testimonials-section">
+      <div class="container">
+        <ul>
+          <li>
+            <img src="images/person.jpg" alt="person" />
+            <blockquote>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+              accusantium optio labore voluptatem rem harum dignissimos natus
+              animi tempore dolores
+            </blockquote>
+            <cite>- Jane Doe</cite>
+          </li>
+          <li>
+            <img src="images/person.jpg" alt="person" />
+            <blockquote>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+              accusantium optio labore voluptatem rem harum dignissimos natus
+              animi tempore dolores
+            </blockquote>
+            <cite>- Jane Doe</cite>
+          </li>
+          <li>
+            <img src="images/person.jpg" alt="person" />
+            <blockquote>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+              accusantium optio labore voluptatem rem harum dignissimos natus
+              animi tempore dolores
+            </blockquote>
+            <cite>- Jane Doe</cite>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container"></div>
+      <div class="contact-left">
+        <h2>Contact</h2>
+        <form action="">
+          <!-- whatever for is boudnd to needs to be bound to the ID for whichever element you want this label to be associ. with   -->
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" />
+          <!-- can do the above with email, with preformatted email warnings (text validation) -->
+
+          <label for="message">Message</label>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        </form>
+        <input type="submit" class="send-message-cta" value="Send message" />
+      </div>
+      <div class="contact-right">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101391.54238615632!2d-122.20539002759268!3d37.425629339051454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb07b9dba1c39%3A0xe1ff55235f576cf!2sPalo%20Alto%2C%20CA!5e0!3m2!1sen!2sus!4v1632721056935!5m2!1sen!2sus"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+
+    <script>
+      const mobileBtn = document.getElementById("mobile-cta");
+      nav = document.querySelector("nav");
+      mobileBtnExit = document.getElementById("mobile-exit");
+
+      mobileBtn.addEventListener("click", () => {
+        nav.classList.add("menu-btn");
+      });
+
+      mobileBtnExit.addEventListener("click", () => {
+        nav.classList.remove("menu-btn");
+      });
+    </script>
+  </body>
+</html>
